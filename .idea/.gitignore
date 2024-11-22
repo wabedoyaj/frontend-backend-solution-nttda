@@ -1,0 +1,6 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignorar dependencias de Node.js
+Front/node_modules/
+Back/node_modules/
