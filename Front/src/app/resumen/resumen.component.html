@@ -1,0 +1,25 @@
+<form action="" class="container">
+    <div class="">
+        <h2>Resumen del cliente</h2>
+        <p>
+            <strong>Tipo de documento:</strong>
+            <span>{{cliente.tipoDocumento}}</span>
+        </p>
+        <p>
+            <strong>Tipo de numero documento:</strong>
+            <span>{{cliente.numeroDocumento}}</span>
+        </p>
+        <p>
+            <strong>Nombre:</strong>
+            <span>{{cliente.nombre}}</span>
+        </p>
+        <p>
+            <strong>Ciudad:</strong>
+            <span>{{cliente.ciudad}}</span>
+        </p>
+    </div>
+    <div class="button">
+        <button (click)="volver()">Volver</button>
+    </div>
+</form>
+

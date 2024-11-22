@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h2>Ingresar datos del cliente</h2>
+    <form class="formulario">
+      <div class="seleccion">
+        <div class="form-group">
+          <label class="label" for="tipoDocumento">Tipo de documento</label>
+          <select id="tipoDocumento" [(ngModel)]="tipoDocumento" name="tipoDocumento" required="">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+            <option value="Pasaporte">Pasaporte</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label class="label" for="numeroDocumento">Número de documento</label>
+          <input
+          id="numeroDocumento"
+          type="text"
+          [(ngModel)]="numeroDocumento"
+          name="numeroDocumento"
+          maxlength="11"
+          minlength="8"
+          pattern="[0-9]*"
+          (input)="validarNumero($event)"
+          />
+
+        </div>
+  
+        
+
+      </div>
+      <div class="button" >
+        <button [disabled]="!isFormValid()" (click)="buscarCliente()">Buscar</button>
+
+      </div>
+  
+      
+    </form>
+  </div>
